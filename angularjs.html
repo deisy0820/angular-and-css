@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src=angular.min.js></script> <!-- libreria del angular -->
+</head>
+<body>
+
+<!-- <div ng-app> 
+	<p>name:<input type="text" ng-model=name></p>
+	<p ng-bind=name></p>
+</div> -->
+
+<!--<div ng-app> <!-- directiva del angular definir una palicion en angular 
+	<p> My first expression: {{ 5 + 5}}</p>
+</div> 
+<div ng-app ng-init=quantity=2;cost=5> <!--se esta declarando las variables 
+<p> Total in dollar:{{ quantity * cost}}</p> 
+</div> 
+
+<div ng-app="myApp" ng-controller= "myController"> <!-- crea un controlador  &scope es un objeto que se crea entre el controlador y la vista
+<button ng-click= "count = count + 1"> click me!</button>
+<p> {{ count }} </p> <!-- esta inyectando el valor del count definido arriba
+ </div> 
+<script>
+	var myApp = angular.module("myApp",[]);
+	myApp.controller('myController',function($scope){
+		$scope.count = 0;
+	}); 
+</script> 	
+
+<div ng-app ng-init="firstName='Jhon';lastName='doe'">
+<p> The full name is. {{firstName + "  " + lastName }}</p>
+	</div> -->
+	<!-- creando una funcion con angular 
+	<p> Try to change the names.</p>
+	<div ng-app=myApp ng-controller=personController>
+    First Name: <input type="text" ng-model= firstName> <br>
+    Last Name: <input type="text" ng-model= lastName> <br>
+    full Name: {{ firstName + " " +lastName }}
+	</div>
+	<script>
+	var myApp = angular.module("myApp", [])
+	myApp.controller("personController",function ($scope)
+	{
+			$scope.firstName = "John";
+			$scope.lastName = "Doe";
+		});
+
+	</script> -->
+	<!-- se define vectores 
+	<div ng-app ng-init=points=[1,15,19,2,40]>
+		<p> The third result is {{points[1]}}</p>
+	</div> -->
+
+	<!-- secrea lista con angular -->
+   <!--<div ng-app ng-init= names=['luz','liz','ana']> 
+   <p> looping with ng-repeat:</p>
+   <ul>
+   <li ng-repeat="x in names"> <!-- hace la funcion como de los ciglos
+   	{{x}}
+   </li>
+   </ul>
+   </div> -->
+
+   <!-- convertir palabras a mayuscula-->
+
+   <!--<div ng-app> 
+   <p> Name: <input type="text" ng-model=nombre></p>
+   <p> En mayusculas {{nombre | uppercase}}</p> <!-- convierte en mayuscula-->
+   <!--<p> En minuscula {{nombre | lowercase}}</p> <!-- convierte en minuscula 
+
+   </div> -->
+
+   <!--hacer ciclos con angulas-->
+   
+   <div ng-app="" ng-init="names=[
+   {name:'ana',country:'Paraguay'},
+   {name:'victor',country:'Argentina'},
+   {name:'luis',country:'Brasil'}]"> 
+   <p>Looping with objects:</p>
+   <ul>
+   	<li ng-repeat="x in names | orderBy:'country'">
+   		{{x.name + ',' + x.country}}
+   	</li>
+   </ul>
+   
+   
+
+
+
+
+</body>
+</html>

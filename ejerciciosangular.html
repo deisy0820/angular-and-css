@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	<script src=angular.min.js></script> <!-- libreria del angular -->
+</head>
+</head>
+<body>
+<!-- 1 mostrar nombre y apellido con el saludo 
+<div ng-app> 
+     <label>Nombre:
+	<p><input type="text" ng-model=Nombre></p>
+	</label>
+	 <label>Apellido:
+	<p><input type="text" ng-model=Apellido></p>
+	</label>
+	
+	full Name: {{ " Hola " + Nombre + " " +Apellido }}
+</div>  -->
+
+
+<!-- 2 con un click  y dos numeros ingresados muestra el resultado -->
+
+<!--<div ng-app> 
+
+<label>Operardor 1 :
+	<p><input type="text" ng-model=Operardor1></p>
+	</label>
+	 <label>Operardor 2:
+	<p><input type="text" ng-model=Operardor2></p>
+	</label>
+	<button ng-click= "Result = Operardor1 * Operardor2">*</button>
+	<p> {{ Result }} </p>
+
+
+</div>  -->
+
+<!-- 3 ingresar una frase y mostrarla al reves  -->
+
+<div ng-app ="myApp">
+    <label>Frase :
+	<p><input type="text" ng-model="text" placeholder="Enter you input here...";  ></p>
+	</label> 
+	<p> Input value: {{ text }}</p>
+	<p> Filtered value: {{text | reverse}}</p>
+	</div>
+	<script>
+	var myApp = angular.module("myApp", []);
+	myApp.filter("reverse", function(){
+		return function(input){
+			return input.split("").reverse().join("");
+
+		}
+	});
+
+
+
+
+
+   </script>  
+
+   <!-- 4 ingresar una frase y mostrarla al reves  -->
+   <div ng-app>
+   <label>Tweet :
+	<p><input type="text" ng-model="parrafo"  maxlength="140"   ng-keydown="Result =  140 - parrafo.length;style=(Result < 6)?{'color':'red'}:{'color':'black'} "  ></p>
+	</label> 
+	<!--<div ng-init= "Result = parrafo.length"></div> -->
+	<!--<button ng-click= "Result =  140 - parrafo.length ">parrafo</button> -->
+   
+	<p ng-style="style"> {{ Result }}</p>
+
+ 
+
+</body>
+
+
+
+
+</html>
